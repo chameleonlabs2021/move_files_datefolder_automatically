@@ -1,8 +1,7 @@
 #!/bin/sh
 
 fil1=listfile.txt
-move=move.txt
-
+curr_year=$1
 check_year()
 {
 if [[ $1 =~ ^[0-9]{4}$ ]];   then
@@ -39,6 +38,6 @@ echo "file: $file"
     else
     echo "moving files to the folder 2022"
     # echo "mv $file ../sorted_photos/2022/ " >> 2022.txt
-    mv -f $file 2022/
+    mv -f $file $curr_year/
     fi
 done < ${fil1}

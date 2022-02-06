@@ -38,6 +38,8 @@ echo "file: $file"
     else
     echo "moving files to the folder 2022"
     # echo "mv $file ../sorted_photos/2022/ " >> 2022.txt
+    echo "creating the folder ${curr_year}"
+    mkdir ${curr_year}
     mv -f $file $curr_year/
     fi
 done < ${fil1}
